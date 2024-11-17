@@ -179,3 +179,26 @@ a {
 
 
 
+/********************************************* PASSWORD */
+
+
+.digitos {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.select {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+    border: none;
+}
+.resultado_select {
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+
+

@@ -19,7 +19,6 @@ function calcularCantidadTotal() {
     return Array.from(cantidades).reduce((total, cantidad) => total + parseInt(cantidad.textContent), 0);
 }
 
-
 btnMenos.forEach((btn, index) => {
     btn.addEventListener("click", () => {
         const cantidadActual = parseInt(cantidades[index].textContent);
@@ -38,8 +37,6 @@ btnMas.forEach((btn, index) => {
 });
 
 btnValidar.addEventListener("click", validarCantidadTotal);
-
-
 function validarCantidadTotal() {
     const total = calcularCantidadTotal();
     if (total === maxTotal) {
@@ -54,3 +51,30 @@ function validarCantidadTotal() {
 
 
 
+
+
+/////////////////// PASSWORD
+const btnIngresar = document.querySelector(".btnIngresar");
+const selects = document.querySelectorAll(".select");
+const resultado = document.querySelector(".resultado_select");
+
+btnIngresar.addEventListener("click", () => {
+    const password = Array.from(selects)
+        .map(select => select.value)
+        .join("");
+
+    if (password === "911") {
+        resultado.textContent = "Contraseña correcta!";
+        resultado.style.color = "green";
+    } else {
+        resultado.textContent = "Contraseña incorrecta.";
+        resultado.style.color = "red";
+    }
+});
+
+selects.forEach(select => {
+    select.addEventListener("change", () => {
+        resultado.textContent = "";
+    });
+});
+/////////////////// PASSWORD
