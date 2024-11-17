@@ -167,6 +167,7 @@ a {
 .header {
     color: var(--color-claro);
     padding: 4rem 0 6rem;
+    margin-bottom: 3rem;
 
     h1 {
         font-size: 6rem;
@@ -175,6 +176,7 @@ a {
 .footer {
     color: var(--color-claro);
     padding: 4rem 0;
+    margin-top: 3rem;
 }
 .secciones {
     gap: 4rem;
@@ -196,10 +198,32 @@ a {
 .textsep {
     margin: 2rem 0 4rem;
 }
+
+
+/********************************************* BORDE ROJO */
+.bordesec {
+    margin: 5rem 10rem;
+    box-sizing: content-box;
+    
+}
 .bordesec img {
     max-width: 80%;
+    transition: opacity 0.12s ease-in-out;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    
+    &:hover {
+        opacity: 0.85;
+        cursor: pointer;
+        
+    }
+}
+.bordeon {
+    border: .8rem solid #ff0000;
 }
 
+
+/********************************************* STICKERS */
 .stickers {
     display: flex;
     gap: 2rem;
@@ -209,5 +233,11 @@ a {
 .sticker img {
     width: 100%;
 }
+
+
+
+
+
+
 
 
