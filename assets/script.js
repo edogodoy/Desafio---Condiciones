@@ -39,12 +39,20 @@ btnMas.forEach((btn, index) => {
 btnValidar.addEventListener("click", validarCantidadTotal);
 function validarCantidadTotal() {
     const total = calcularCantidadTotal();
+    const textocantidad = document.querySelector('.texto-cantidad');
     if (total === maxTotal) {
         txtValidar.textContent = "Llevas el máximo de stickers permitidos!";
     } else if (total < maxTotal) {
         txtValidar.textContent = `Llevas ${total} stickers.`;
     } else {
         txtValidar.textContent = "Has excedido el límite de stickers.";
+        if (total > maxTotal) {
+            textocantidad.classList.add('temblor');
+            setTimeout(() => {
+                textocantidad.classList.remove('temblor');
+            }, 300);
+        }
+        
     }
 }
 /////////////////// STICKERS
@@ -78,3 +86,10 @@ selects.forEach(select => {
     });
 });
 /////////////////// PASSWORD
+
+
+
+
+
+
+
